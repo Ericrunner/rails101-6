@@ -1,0 +1,25 @@
+<div class="btn btn-default pull-right">
+    <%= link_to("New Group",new_group_path)%>
+</div>
+<table class="table">
+   <thead>
+     <tr>
+       <th>#</th>
+       <th>Title</th>
+       <th>Description</th>
+     </tr>
+   </thead>
+   <tbody>
+     <% @groups.each do |group| %>
+       <tr>
+         <td>#</td>
+         <td><%= link_to(group.title,group_path(group))%></td>
+         <td><%= group.description%></td>
+         <td>
+           <%= link_to("Edit",edit_group_path(group),class: "btn btn-default")%>
+           <%= link_to("Delete",group_path(group), method: :delete,class: "btn btn-default") %>
+         </td>
+       </tr>
+     <% end %>
+   </tbody>
+</table>
