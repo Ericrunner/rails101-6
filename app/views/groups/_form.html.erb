@@ -1,8 +1,8 @@
 <%= simple_form_for @group do |f| %>
    <div class="form-group">
      <%= f.input :title, label: '标题', input_html: {class: "form-control"}%>
-     <%= f.input :description, label: '叙述',
-          hint: 'No special', input_html: {class: "form-control"}%>
+     <%= f.input :description, placeholder: 'This is placeholder',
+          hint: 'No special character', input_html: {class: "form-control"}%>
    </div>
    <%= f.submit 'Submit', class: "btn btn-primary", data: {disable_with: "Submiting..."}%>
 <% end %>
