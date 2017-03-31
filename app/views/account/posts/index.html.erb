@@ -1,0 +1,19 @@
+<h2>我发表的文章</h2>
+<table class="table">
+   <thead>
+     <tr>
+       <th>#</th>
+       <th>Post content</th>
+       <th>参加的群组</th>
+     </tr>
+   </thead>
+   <tbody>
+     <% @posts.each do |post|%>
+     <tr>
+       <td>#</td>
+       <td><%= post.content%></td>
+       <td><%= post.group.title%></td>
+     </tr>
+     <% end %>
+   </tbody>
+</table>
