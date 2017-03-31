@@ -1,0 +1,5 @@
+<h2>编辑文章</h2>
+<%= simple_form_for [:account,@post] do |f|%>
+  <%= f.input :content,label:"文章内容：",input_html:{class: "optional string"}%>
+  <%= f.submit 'Submit'%>
+<% end %>
